@@ -21,6 +21,7 @@ const Controls = () => {
          }
          </tbody>
        </table>
+       Total: {sth.total(10)}
       </div>
   )
 }
