@@ -17,10 +17,12 @@
   font: 70px Arial, sans-serif;
   text-align: center;
   text-shadow: 2px 2px #ffffff;
+  font-weight: bold;
 }
 
 body {
   color: white;
+  font-weight: bold;
   font: 24px Arial, sans-serif;
   text-shadow: 2px 2px #990099;
   background-color: green;
@@ -29,6 +31,7 @@ body {
 }
 
 .Total {
+  font-weight: bold;
   color: white;
   font: 80px Arial, sans-serif;
   text-shadow: 2px 2px #990099;
@@ -40,11 +43,11 @@ body {
 
 .buttons {
   margin: 0 auto;
-  size: 100px
+  size: 100px;
 }
 
 .click:hover {
-    background: lightblue;
+    background: white;
     transform: scale(2);
     transition-duration: 0.2s;
     opacity: 0.8;

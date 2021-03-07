@@ -40,13 +40,13 @@ render() {
     <div className="buttons">
     <h1>Bowling Scorecard</h1>
     <form onSubmit = {this.handleSubmit}>
-      <label>Turn (e.g. frame 1 roll 1 = 1.1)</label>
+      <label>Turn (e.g. frame 1 roll 1 = 1.1): </label>
       <input type="text"
              name="turn"
              value={this.state.turn}
              onChange={this.handleTurnChange}
       />
-      <label>Score</label>
+      <label> Score: </label>
       <input type="text"
              name="score"
              value={this.state.score}
@@ -60,8 +60,8 @@ render() {
            Object.keys(this.sth.score).map(itemKey => {
              return (
                <tr key={itemKey}>
-                 <td> {itemKey}</td>
-                 <td>{this.sth.score[itemKey]}</td>
+                 <td> {itemKey}   -    </td>
+                 <td> {this.sth.score[itemKey]}</td>
                </tr>
              )
            })
