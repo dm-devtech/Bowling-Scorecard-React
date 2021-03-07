@@ -1,29 +1,79 @@
-import React from 'react';
-import Print from './Print.js';
 import Scorecard from './Scorecard.js';
+import React, { Component } from 'react';
 
-const Controls = () => {
-  let sth = new Scorecard
+class Controls extends Component {
+
+  constructor() {
+    super()
+    this.sth = new Scorecard()
+      this.state = {
+        turn: '',
+        score: ''
+      }
+      this.handleTurnChange = this.handleTurnChange.bind(this)
+      this.handleScoreChange = this.handleScoreChange.bind(this)
+    }
+
+    handleTurnChange = event => {
+      this.setState({
+        turn: event.target.value
+      });
+    }
+
+    handleScoreChange = event => {
+      this.setState({
+        score: event.target.value
+      });
+    }
+
+    handleSubmit = (event) => {
+      event.preventDefault();
+      this.setState({
+        isSubmitted: true,
+      });
+      this.sth.addRoll(Number(`${this.state.turn}`), Number(`${this.state.score}`))
+  };
+
+render() {
+  console.log(this.sth.score)
   return (
-    <div>
+    <div className="buttons">
     <h1>Bowling Scorecard</h1>
+    <form onSubmit = {this.handleSubmit}>
+      <label>Turn (e.g. frame 1 roll 1 = 1.1)</label>
+      <input type="text"
+             name="turn"
+             value={this.state.turn}
+             onChange={this.handleTurnChange}
+      />
+      <label>Score</label>
+      <input type="text"
+             name="score"
+             value={this.state.score}
+             onChange={this.handleScoreChange}
+      />
+      <input className="click" type="submit" value="Submit" />
+  </form>
       <table>
          <tbody>
          {
-           Object.keys(sth.score).map(itemKey => {
+           Object.keys(this.sth.score).map(itemKey => {
              return (
                <tr key={itemKey}>
-                 <td>Frame.Roll {itemKey}</td>
-                 <td>{itemKey === 'Link' ? <a href={sth.score[itemKey]}>{sth.score[itemKey]}</a> : sth.score[itemKey]}</td>
+                 <td> {itemKey}</td>
+                 <td>{this.sth.score[itemKey]}</td>
                </tr>
              )
            })
          }
          </tbody>
        </table>
-       Total: {sth.total(10)}
+       <div className="Total">
+       Total: {this.sth.total(10)}
+       </div>
       </div>
   )
 }
+}
 
-export default Controls;
+export default Controls

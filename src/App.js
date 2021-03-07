@@ -1,11 +1,11 @@
-import React, { useState} from 'react';
+import React from 'react';
 import Controls from './components/Controls.js'
 
 function App() {
   return (
     <div className="App">
         <Controls/>
-      </div>
+    </div>
   );
 }
 

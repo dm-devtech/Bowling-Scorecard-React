@@ -1,0 +1,58 @@
+.Header {
+  height: 100%;
+  width: 100%;
+  letter-spacing: 5px;
+  color: white;
+  font: 90px Arial, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px #ffffff;
+}
+
+.body-text {
+  height: 100%;
+  width: 100%;
+  letter-spacing: 5px;
+  color: white;
+  font: 70px Arial, sans-serif;
+  text-align: center;
+  text-shadow: 2px 2px #ffffff;
+}
+
+body {
+  color: white;
+  font: 24px Arial, sans-serif;
+  text-shadow: 2px 2px #990099;
+  background-color: green;
+  background-image: url('./Bowling.jpg');
+  background-size: 1920px 1080px;
+}
+
+.Total {
+  color: white;
+  font: 80px Arial, sans-serif;
+  text-shadow: 2px 2px #990099;
+  background-color: green;
+  background-image: url('./Bowling.jpg');
+  background-size: 1920px 1080px;
+  text-align: center;
+}
+
+.buttons {
+  margin: 0 auto;
+  size: 100px
+}
+
+.click:hover {
+    background: lightblue;
+    transform: scale(2);
+    transition-duration: 0.2s;
+    opacity: 0.8;
+}
+
+.click {
+    width: 100px;
+    background: white;
+    font-size: 20px;
+    cursor: pointer;
+}
