@@ -4,13 +4,6 @@ import Controls from '../components/Controls.js';
 import App from "../App";
 
 describe('<Controls />', () => {
-// let display
-
-  beforeEach(() => {
-    // display = render(<Controls />);
-  });
-
-  afterEach(cleanup)
 
   it('renders without crashing', () => {
     render(<Controls />);
