@@ -42,12 +42,14 @@ render() {
       <label>Turn (e.g. frame 1 roll 1 = 1.1): </label>
       <input type="text"
              name="turn"
+             data-testid="turn"
              value={this.state.turn}
              onChange={this.handleTurnChange}
       />
       <label> Score: </label>
       <input type="text"
              name="score"
+             data-testid="score"
              value={this.state.score}
              onChange={this.handleScoreChange}
       />

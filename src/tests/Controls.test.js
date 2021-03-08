@@ -38,7 +38,8 @@ describe('<Controls />', () => {
     });
 
     it("entered turn and score updates scorecard", () => {
-      const { getByTestId, getByText } = render(<Controls />);
+      const display = render(<Controls />);
+      const { getByTestId } = display
       const inputTurnOne = screen.getByTestId('turn')
       const inputScoreOne = screen.getByTestId('score')
 
