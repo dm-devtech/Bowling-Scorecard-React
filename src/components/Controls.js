@@ -5,7 +5,7 @@ class Controls extends Component {
 
   constructor() {
     super()
-    this.sth = new Scorecard()
+    this.game = new Scorecard()
       this.state = {
         turn: '',
         score: ''
@@ -31,7 +31,7 @@ class Controls extends Component {
       this.setState({
         isSubmitted: true,
       });
-      this.sth.addRoll(Number(`${this.state.turn}`), Number(`${this.state.score}`))
+      this.game.addRoll(Number(`${this.state.turn}`), Number(`${this.state.score}`))
   };
 
 render() {
@@ -58,11 +58,11 @@ render() {
       <table>
          <tbody>
          {
-           Object.keys(this.sth.score).map(itemKey => {
+           Object.keys(this.game.score).map(itemKey => {
              return (
                <tr key={itemKey}>
                  <td> {itemKey}   -    </td>
-                 <td> {this.sth.score[itemKey]}</td>
+                 <td> {this.game.score[itemKey]}</td>
                </tr>
              )
            })
@@ -70,7 +70,7 @@ render() {
          </tbody>
        </table>
        <div className="Total">
-       Total: {this.sth.total(10)}
+       Total: {this.game.total(10)}
        </div>
       </div>
   )
