@@ -40,14 +40,18 @@ describe('<Controls />', () => {
     it("entered turn and score updates scorecard", () => {
       const display = render(<Controls />);
       const { getByTestId } = display
-      const inputTurnOne = screen.getByTestId('turn')
-      const inputScoreOne = screen.getByTestId('score')
+      const inputTurn = screen.getByTestId('turn')
+      const inputScore = screen.getByTestId('score')
 
-      fireEvent.change(inputTurnOne, {target: { value: 1.1 } });
-      fireEvent.change(inputScoreOne, {target: { value: 5 } });
+      fireEvent.change(inputTurn, {target: { value: 1.1 } });
+      fireEvent.change(inputScore, {target: { value: 5 } });
       fireEvent.submit(getByTestId('form'));
 
-      expect(display.getByText(/Total: 5/))
+      fireEvent.change(inputTurn, {target: { value: 1.2 } });
+      fireEvent.change(inputScore, {target: { value: 4 } });
+      fireEvent.submit(getByTestId('form'));
+
+      expect(display.getByText(/Total: 9/))
     });
   });
 
