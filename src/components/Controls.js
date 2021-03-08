@@ -35,11 +35,10 @@ class Controls extends Component {
   };
 
 render() {
-  console.log(this.sth.score)
   return (
     <div className="buttons">
     <h1>Bowling Scorecard</h1>
-    <form onSubmit = {this.handleSubmit}>
+    <form onSubmit={this.handleSubmit} data-testid="form">
       <label>Turn (e.g. frame 1 roll 1 = 1.1): </label>
       <input type="text"
              name="turn"
@@ -52,8 +51,8 @@ render() {
              value={this.state.score}
              onChange={this.handleScoreChange}
       />
-      <input className="click" type="submit" value="Submit" />
-  </form>
+      <button className="click" type="submit">Submit</button>
+    </form>
       <table>
          <tbody>
          {
