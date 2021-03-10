@@ -2,7 +2,7 @@
 A Bowling Scorecard React app
 
 ## Screenshot
-![Coverage](Screenshots/Page1.JPG)
+![Coverage](Screenshots/Homepage.JPG)
 
 ## Available Scripts
 1. Clone repo

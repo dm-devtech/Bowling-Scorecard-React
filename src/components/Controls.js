@@ -61,8 +61,8 @@ render() {
            Object.keys(this.game.score).map(itemKey => {
              return (
                <tr key={itemKey}>
-                 <td> {itemKey}   -    </td>
-                 <td> {this.game.score[itemKey]}</td>
+                 <td> {itemKey} </td>
+                 <td> {this.game.score[itemKey]}  </td>
                </tr>
              )
            })
